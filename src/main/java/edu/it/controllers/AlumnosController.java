@@ -27,11 +27,20 @@ public class AlumnosController extends HttpServlet {
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
+    	//Inserto la nueva funcion de Utiles
+    	Utiles.manejarRespuesta(request, response, (() -> {
+    		return null;
+    	}));
+    	
     			response.setContentType("application/json");
     			PrintWriter out = response.getWriter();
     			// Lectura del contenido entrante
     			String s = Utiles.leerInputStreamReader(request.getInputStream());
     			// Fin lectura contenido entrante
+    			
+    			
+    			
+    			
     			
     			Gson gson = new Gson();
     			Alumno a = null;

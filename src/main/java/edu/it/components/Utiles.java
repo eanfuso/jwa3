@@ -5,8 +5,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.UUID;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import com.github.javafaker.Faker;
 
+import edu.it.interfaces.InversionDeControl;
 import edu.it.model.Alumno;
 
 public class Utiles {
@@ -40,4 +45,12 @@ public class Utiles {
 			throw new RuntimeException(ex.getMessage());
 		}
 	}
+public static void manejarRespuesta (
+		HttpServletRequest req,
+		HttpServletResponse res,
+		InversionDeControl ioc) {
+	
+	
+	
+}
 }
