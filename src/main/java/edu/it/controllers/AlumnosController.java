@@ -34,8 +34,14 @@ public class AlumnosController extends HttpServlet {
     			// Fin lectura contenido entrante
     			
     			Gson gson = new Gson();
-    			Alumno a = gson.fromJson(s, Alumno.class);
+    			Alumno a = null;
     			
+    			try {
+    			 a = gson.fromJson(s, Alumno.class);
+    			}catch (Exception ex) {
+        			out.println(gson.toJson(new ResultadoError("No se pudo grabar")));
+        			response.setStatus(400);//bad request
+    			}
     			System.out.println(a.id);
     			System.out.println(a.nombre);
     			System.out.println(a.apellido);
@@ -50,6 +56,7 @@ public class AlumnosController extends HttpServlet {
     		    tx.commit();
     		}catch (Exception ex){
     			out.println(gson.toJson(new ResultadoError("No se pudo grabar")));
+    			response.setStatus(500);//Internal server error
     			return ;
     			
     			
