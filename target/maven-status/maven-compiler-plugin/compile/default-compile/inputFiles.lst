@@ -1,0 +1,7 @@
+/home/esteban/javaWebApi/clase3/web/src/main/java/edu/it/components/Utiles.java
+/home/esteban/javaWebApi/clase3/web/src/main/java/edu/it/dtos/ResultadoError.java
+/home/esteban/javaWebApi/clase3/web/src/main/java/edu/it/dtos/ResultadoOK.java
+/home/esteban/javaWebApi/clase3/web/src/main/java/edu/it/model/Alumno.java
+/home/esteban/javaWebApi/clase3/web/src/main/java/edu/it/controllers/InventarAlumnoController.java
+/home/esteban/javaWebApi/clase3/web/src/main/java/edu/it/controllers/AlumnosController.java
+/home/esteban/javaWebApi/clase3/web/src/main/java/edu/it/components/ConectorJPA.java

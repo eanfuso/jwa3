@@ -1,0 +1,7 @@
+edu/it/model/Alumno.class
+edu/it/dtos/ResultadoError.class
+edu/it/controllers/InventarAlumnoController.class
+edu/it/controllers/AlumnosController.class
+edu/it/components/Utiles.class
+edu/it/components/ConectorJPA.class
+edu/it/dtos/ResultadoOK.class
