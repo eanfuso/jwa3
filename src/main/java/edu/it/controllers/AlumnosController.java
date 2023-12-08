@@ -29,19 +29,24 @@ public class AlumnosController extends HttpServlet {
             throws IOException, ServletException {
     	//Inserto la nueva funcion de Utiles
     	Utiles.manejarRespuesta(request, response, (() -> {
-    		return null;
+		Alumno a = Utiles.deserializarInputStream(request, Alumno.class);
+    		
+    		// Lectura del contenido entrante
+			//String s = Utiles.leerInputStreamReader(request.getInputStream()); esta lectura ahora se realiza en Utiles.Deserailizar...
+			// Fin lectura contenido entrante
+		//System.out.println(a.id + " " + a.nombre);
+		Utiles.persistirObjeto(a);
+    		return a;
     	}));
     	
-    			response.setContentType("application/json");
-    			PrintWriter out = response.getWriter();
-    			// Lectura del contenido entrante
-    			String s = Utiles.leerInputStreamReader(request.getInputStream());
-    			// Fin lectura contenido entrante
+    		//	response.setContentType("application/json"); -migrado a utiles
+    			//PrintWriter out = response.getWriter();
+
     			
     			
     			
     			
-    			
+    			/*
     			Gson gson = new Gson();
     			Alumno a = null;
     			
@@ -77,5 +82,6 @@ public class AlumnosController extends HttpServlet {
     		out.println(gson.toJson(new ResultadoOK("Alumno agregado en forma exitosa...")));
                 
                 response.setStatus(201);
+       */
         }
 }

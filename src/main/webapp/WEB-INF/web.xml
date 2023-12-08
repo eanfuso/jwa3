@@ -12,6 +12,10 @@
     <servlet-name>random</servlet-name>
     <servlet-class>edu.it.controllers.InventarAlumnoController</servlet-class>
   </servlet>
+   <servlet>
+    <servlet-name>clienteController</servlet-name>
+    <servlet-class>edu.it.controllers.ClienteController</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>alumnos</servlet-name>
     <url-pattern>/alumno</url-pattern>
@@ -23,5 +27,9 @@
   <servlet-mapping>
     <servlet-name>random</servlet-name>
     <url-pattern>/inventaralumnos</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>clienteController</servlet-name>
+    <url-pattern>/cliente</url-pattern>
   </servlet-mapping>
 </web-app>
