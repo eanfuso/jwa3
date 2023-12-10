@@ -26,7 +26,7 @@ public class InventarAlumnoController extends HttpServlet {
 	            for (Integer x : new Integer[5]) {
 	            	alumnos.add(Utiles.generarAlumnoRandom());
 	            }
-	            
+	            request.getP
 	            Gson gson = new Gson();
 	            
 	  //   var resultado = new ResultadoOK(alumnos); //encapsulo alumnos en resultadoOK
