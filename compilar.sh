@@ -3,6 +3,7 @@
 sudo rm -rf /opt/tomcat/webapps/ROOT/
 sudo rm -rf /opt/tomcat/webapps/ROOT.war
 mvn clean install -DskipTests
+#mvn install -DskipTests
 sudo mv target/ROOT /opt/tomcat/webapps/
 
 #cd /opt/tomcat/bin/

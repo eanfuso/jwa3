@@ -21,12 +21,12 @@ public class InventarAlumnoController extends HttpServlet {
 	            response.setContentType("application/json");
 	            PrintWriter out = response.getWriter();
 	            
-	            var alumnos = new ArrayList<Alumno>();
-	            
-	            for (Integer x : new Integer[5]) {
-	            	alumnos.add(Utiles.generarAlumnoRandom());
-	            }
-	            request.getP
+//	            var alumnos = new ArrayList<Alumno>();
+//	            
+//	            for (Integer x : new Integer[5]) {
+//	            	alumnos.add(Utiles.generarAlumnoRandom());
+//	            }
+//	            request.getParameter(getServletInfo());
 	            Gson gson = new Gson();
 	            
 	  //   var resultado = new ResultadoOK(alumnos); //encapsulo alumnos en resultadoOK
