@@ -12,6 +12,7 @@ public class ConectorJPA {
 
         em = entityManagerFactory.createEntityManager();
     }
+  
     public EntityManager getEntityManager() {
         return em;
     }

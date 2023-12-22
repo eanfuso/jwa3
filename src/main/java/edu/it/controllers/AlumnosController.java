@@ -23,18 +23,12 @@ public class AlumnosController extends HttpServlet {
 	public void get(HttpServletResponse response) throws IOException, ServletException {
 		response.setContentType("application/json");
 		response.setStatus(200);
-
+		
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		response.setContentType("application/json");
-		PrintWriter out = response.getWriter();
-		out.println("<h1>Hora Actual: ");
-		out.println(System.currentTimeMillis());
-		out.println("</h1>");
-		response.setStatus(200);
 		Utiles.manejarRespuesta(request, response, () -> {
-			return Utiles.obtenerMapa("Hora actual ", String.valueOf(System.currentTimeMillis()));
+			return Utiles.leerTodosLosRegistros();
 
 		});
 	}

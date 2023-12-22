@@ -29,4 +29,19 @@
 			<property name="hibernate.connection.url" value="jdbc:postgresql://192.168.0.179/jpa-lu-mi" />
 		</properties>
 	</persistence-unit>
+	
+		<persistence-unit name="mariadbUsuario" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+                <properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB53Dialect"></property>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.connection.driver_class" value="org.mariadb.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.connection.url" value="jdbc:mariadb://localhost:3306/Usuario" />
+		</properties>
+	</persistence-unit>
+	
+	
 </persistence>

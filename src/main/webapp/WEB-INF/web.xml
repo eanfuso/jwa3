@@ -4,6 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>edu.it.controllers.LoginController</servlet-class>
+  </servlet>
+  
   <servlet>
     <servlet-name>alumnos</servlet-name>
     <servlet-class>edu.it.controllers.AlumnosController</servlet-class>
@@ -32,4 +38,14 @@
     <servlet-name>clienteController</servlet-name>
     <url-pattern>/cliente</url-pattern>
   </servlet-mapping>
+     <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/loguin</url-pattern>
+  </servlet-mapping>
+
+ <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/loguin/*</url-pattern>
+  </servlet-mapping>
+
 </web-app>

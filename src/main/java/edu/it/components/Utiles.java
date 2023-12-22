@@ -77,6 +77,15 @@ public class Utiles {
 		
 				
 	}
+	public static Object leerTodosLosRegistros() {//método en desarrollo
+		var conn = new ConectorJPA();
+	    var entityManager =	conn.getEntityManager();
+	   // var tx = entityManager.getTransaction();
+	    //tx.begin();//esta linea y la de arriba se sacan porque->"no hace falta transaccion para las lecturas..."
+	    var qr = entityManager.createQuery("SELECT a FROM Alumno a"); //Alias a asociado a la tabla alumnos. El lenguaje es jpql, no sql
+	    return qr.getResultList();//arriba en el query se pone el nombre de la clase, Alumno, no la tabla "Alumnos"
+	   
+	}
 	
 	
 	public static void persistirObjeto(Object obj) {
@@ -87,6 +96,9 @@ public class Utiles {
 	    entityManager.merge(obj);
 	    tx.commit();
 	}
+
+	
+	
 	public static  void borrarObjeto(String id) {
 	var conn = new ConectorJPA();
     var entityManager =	conn.getEntityManager();
@@ -141,6 +153,18 @@ public class Utiles {
 		return a;
 	}
 	
+	public static void validarPathInfoNotNull(String pathInfo) {
+		if (pathInfo == null) {
+			throw new BadRequestException("Se esperaba un parametro");
+		}
+	}
+	public static void validarPathInfo(String uuid) {
+		uuid = uuid.replace("/", "");
+		
+		if (uuid.equals("")) {
+			throw new BadRequestException("se requiere el id del objeto");
+		}
+	}
 	public static void validarId(String id) {
 		
 		id = id.replace("/", "");
