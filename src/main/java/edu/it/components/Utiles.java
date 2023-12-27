@@ -69,6 +69,7 @@ public class Utiles {
 		String serializado ="";
 		try {
 			serializado = leerInputStreamReader(req.getInputStream());
+		//	System.out.println("Lo que recibo serializado es: "+serializado);
 			return new Gson().fromJson(serializado, clazz);
 			
 		} catch (Exception ex) {//Cuando tenía IOException, no arrojaba el error correcto, ante un mal formateo del json, por ejemplo
@@ -113,6 +114,20 @@ public class Utiles {
 	}
 	
 	
+	public static  void borrarObjetoGenerico(String id, Class clazz) {
+		var conn = new ConectorJPA();
+	    var entityManager =	conn.getEntityManager();
+	    var tx = entityManager.getTransaction();
+	    tx.begin();
+	    var obj = entityManager.find(clazz, id);
+	    if (obj == null) {
+	    	throw new NotFoundException("objeto generico persistido no encontrado");
+	    }
+	    entityManager.remove(obj);
+	    tx.commit();
+		}
+	
+	
 	
 	public static void manejarRespuesta (
 			HttpServletRequest req,
@@ -134,7 +149,7 @@ public class Utiles {
 		try {
 			out = res.getWriter();
 		var z = ioc.controlar(); //controlar es el metodo abstracto de la clase. Va a ejecutar el método pasado como argumento
-		//System.out.println("La clase traida: "+ ioc.getClass());
+		System.out.println("La clase traida: "+ ioc.getClass());
 		out.println(new Gson().toJson(new ResultadoOK(z)));
 		res.setStatus(httpStatus);
 	}catch (HttpException ex) {

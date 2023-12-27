@@ -9,7 +9,6 @@ edu/it/components/Utiles.class
 edu/it/components/ConectorJPA.class
 edu/it/interfaces/InversionDeControl.class
 edu/it/dtos/ResultadoOK.class
-edu/it/components/ConectorJPAU.class
 edu/it/model/Alumno.class
 edu/it/errores/HttpException.class
 edu/it/controllers/LoginController.class

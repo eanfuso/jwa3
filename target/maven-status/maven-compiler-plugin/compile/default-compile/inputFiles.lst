@@ -6,7 +6,6 @@
 /home/esteban/javaWebApi/jwa3/src/main/java/edu/it/controllers/AlumnosController.java
 /home/esteban/javaWebApi/jwa3/src/main/java/edu/it/errores/NotFoundException.java
 /home/esteban/javaWebApi/jwa3/src/main/java/edu/it/controllers/InventarAlumnoController.java
-/home/esteban/javaWebApi/jwa3/src/main/java/edu/it/components/ConectorJPAU.java
 /home/esteban/javaWebApi/jwa3/src/main/java/edu/it/components/ConectorJPA.java
 /home/esteban/javaWebApi/jwa3/src/main/java/edu/it/interfaces/InversionDeControl.java
 /home/esteban/javaWebApi/jwa3/src/main/java/edu/it/dtos/ResultadoOK.java
